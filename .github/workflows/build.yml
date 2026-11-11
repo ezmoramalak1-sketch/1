@@ -1,4 +1,9 @@
+
 name: Build RYUMA
+
+concurrency:
+  group: ryuma-build-${{ github.ref }}
+  cancel-in-progress: true
 
 on:
   workflow_dispatch:
